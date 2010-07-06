@@ -1,13 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :users
+  map.resources :microposts
+
   map.contact '/contact', :controller => 'pages', :action => 'contact'
   map.about   '/about',   :controller => 'pages', :action => 'about'
   map.help    '/help',    :controller => 'pages', :action => 'help'
   map.signup  '/signup',  :controller => 'users', :action => 'new'
   
-  map.resources :microposts
-
-  map.resources :users
-
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
